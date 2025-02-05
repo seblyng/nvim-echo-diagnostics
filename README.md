@@ -7,7 +7,7 @@ This plugin uses nvim-lspconfig, and provides functions to echo the entire messa
 ### packer.nvim
 
 ```Lua
-use 'seblj/nvim-echo-diagnostics'
+use 'seblyng/nvim-echo-diagnostics'
 use 'neovim/nvim-lspconfig'
 ```
 
@@ -16,7 +16,7 @@ use 'neovim/nvim-lspconfig'
 ```Vim
 call plug#begin()
 
-Plug 'seblj/nvim-echo-diagnostics'
+Plug 'seblyng/nvim-echo-diagnostics'
 Plug 'neovim/nvim-lspconfig'
 
 call plug#end()

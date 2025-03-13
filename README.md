@@ -1,6 +1,6 @@
 # nvim-echo-diagnostics
 
-This plugin uses nvim-lspconfig, and provides functions to echo the entire message.
+This plugin provides functions to echo diagnostics without being prompted to press enter.
 
 ## Installation
 
@@ -8,7 +8,6 @@ This plugin uses nvim-lspconfig, and provides functions to echo the entire messa
 
 ```Lua
 use 'seblyng/nvim-echo-diagnostics'
-use 'neovim/nvim-lspconfig'
 ```
 
 ### vim-plug
@@ -17,7 +16,6 @@ use 'neovim/nvim-lspconfig'
 call plug#begin()
 
 Plug 'seblyng/nvim-echo-diagnostics'
-Plug 'neovim/nvim-lspconfig'
 
 call plug#end()
 ```
@@ -25,10 +23,10 @@ call plug#end()
 ## Setup
 
 ```lua
-require("echo-diagnostics").setup{
+require('echo-diagnostics').setup({
     show_diagnostic_number = true,
     show_diagnostic_source = false,
-}
+})
 ```
 
 ## Usage

@@ -5,6 +5,7 @@ local current_msg = nil
 local opt = {
     show_diagnostic_number = true,
     show_diagnostic_source = false,
+    show_diagnostic_code = false
 }
 
 local function find_line_diagnostic(show_entire_diagnostic)
@@ -23,6 +24,9 @@ local function find_line_diagnostic(show_entire_diagnostic)
     for k, v in pairs(diagnostics) do
         if v.message then
             local msg = opt.show_diagnostic_number and string.format('%s: %s', k, v.message) or v.message
+            if opt.show_diagnostic_code and v.code then
+                msg = msg .. ' [' .. v.code .. ']'
+            end
             if opt.show_diagnostic_source and v.source then
                 msg = msg .. ' (' .. v.source .. ')'
             end
